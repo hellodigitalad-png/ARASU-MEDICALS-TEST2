@@ -103,30 +103,27 @@
 
 
 /* =========================================
-   BRAND & LOGO (CLASS NAMES MATCHED)
+   BRAND & LOGO (HYBRID ABSOLUTE POSITIONING)
    ========================================= */
-/* The link block sets a safe structural boundary so nav elements don't overlap */
+/* The structural anchor box that reserves space in the header layout */
 .brand { 
   display: flex; 
   align-items: center; 
-  justify-content: center;
   text-decoration: none; 
-  height: 70px;                /* Controls navbar structure height */
-  width: 130px;                /* Rigid reserved width for the logo */
+  height: 70px;                /* Match navbar height */
+  width: 130px;                /* Rigid reserved space */
   position: relative;
   z-index: 10;
 }
 
-/* MATCHED WITH REACT CLASS: .navbar-logo */
 .navbar-logo {
-  height: 70px;                /* Safely fills parent bounding height */
+  position: absolute;
+  left: 0;
+  top: 50%;                    /* True structural vertical center */
+  transform: translateY(-40%); /* Slightly adjusted offset to align circle cleanly */
+  height: 135px;               /* Force explicit large visual size */
   width: auto;                 
   object-fit: contain;
-  margin-top: 50px;
-  
-  /* Creates the overlapping large circle cleanly without affecting text flows */
-  transform: scale(1.9);       
-  transform-origin: center center; 
 }
 
 
@@ -196,8 +193,9 @@
   }
   
   .navbar-logo {
-    height: 60px;
-    transform: scale(1.6); 
+    height: 115px;             /* Keeps logo prominent on tablet screen bounds */
+    top: 50%;
+    transform: translateY(-45%);
   }
 
   .main-nav { display: none; }
@@ -246,16 +244,19 @@
 
   .header-inner {
     padding: 8px 16px;  
+    align-items: center;       /* Ensures burger menu icon aligns with center line */
+    height: 60px;              /* Explicit uniform header inner row height */
   }
   
   .brand {
-    width: 80px;        
-    height: 50px;
+    width: 90px;               /* Allocates layout space to keep links safe */
+    height: 100%;
   }
 
   .navbar-logo {
-    height: 50px;
-    transform: scale(1.4);
-    transform-origin: left center; 
+    height: 100px;             /* Massive overlapping circle size on small viewports */
+    left: 0;                   /* Pulls it neatly back into view boundary edge */
+    top: 50%;
+    transform: translateY(-42%);/* Locks it flawlessly center vertically */
   }
 }
