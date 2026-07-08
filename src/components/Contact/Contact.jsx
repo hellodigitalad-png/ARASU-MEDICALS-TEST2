@@ -126,7 +126,7 @@ ${form.message}`;
 
                 <h4>Email</h4>
 
-                <a href="mailto:thisarasumedicaltirupur@gmail.com">
+                <a href="mailto:arasumedicaltirupur@gmail.com">
                   arasumedicaltirupur@gmail.com
                 </a>
 

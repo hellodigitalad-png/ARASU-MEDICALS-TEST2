@@ -11,7 +11,7 @@ const TOPBAR_MESSAGES = [
   { icon: <ClockIcon size={14} />, text: "Mon – Sun, 8:00 AM – 10:00 PM" },
   { icon: null, text: "Free delivery on orders above ₹499" },
   { icon: null, text: "100% Genuine Medicines — Verified & Trusted" },
-  { icon: null, text: "thisarasumedicaltirupur@gmail.com", href: "mailto:thisarasumedicaltirupur@gmail.com" },
+  { icon: null, text: "arasumedical@gmail.com", href: "mailto:arasumedical@gmail.com" },
 ];
 
 const SLIDE_INTERVAL_MS = 3200;

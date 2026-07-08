@@ -112,14 +112,14 @@
   text-decoration: none; 
   position: relative; /* Acts as the anchor */
   height: 70px;       /* Set this to your desired Navbar height */
-  width: 190px;       /* Reserve space so nav links don't slide under the logo */
+  width: 130px;       /* Reserve space so nav links don't slide under the logo */
 }
 
 /* 2. Style the logo to be large but "float" */
 .nav-logo {
   position: absolute; /* Takes the logo out of the layout flow */
   left: 0;
-  top: 80%;           /* Move to vertical center */
+  top: 90%;           /* Move to vertical center */
   transform: translateY(-50%); /* Perfectly center it vertically */
   
   height: 140px;      /* Your desired large height */
