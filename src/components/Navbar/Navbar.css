@@ -194,12 +194,6 @@
     height: 60px;       /* Keeps navbar height proportioned on mobile devices */
   }
 
-  /* Fix: logo was still using the desktop 140px height here, so it no
-     longer fit inside the shrunk 60px header and got cut off/overlapped. */
-  .nav-logo {
-    height: 90px;
-  }
-
   .main-nav { display: none; }
   .header-phone { display: none; }
   .menu-toggle { display: flex; }
@@ -252,12 +246,9 @@
     width: 70px;        /* Ensures the elements don't wrap to a new line */
   }
 
-  /* Fixed: logo now sized to fit the header instead of being scaled up
-     past it (the old scale(1.3) on top of the already-large base height
-     was what pushed it outside the header and made it look cut off). */
+  /* Fixed: Combining your custom scale while preserving the vertical centering */
   .nav-logo {
-    height: 70px;
-    transform: translateY(-50%);
+    transform: translateY(-50%) scale(1.3); 
     left: -5px;         /* Prevents scale scaling from clipping the logo out of screen */
   }
 }
