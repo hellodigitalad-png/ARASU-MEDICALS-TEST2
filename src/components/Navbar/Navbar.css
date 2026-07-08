@@ -50,7 +50,7 @@
   }
 }
 
-/* Progress dots so people can jump to a message or see rotation is happening */
+/* Progress dots */
 .topbar-dots {
   display: flex;
   align-items: center;
@@ -103,29 +103,30 @@
 
 
 /* =========================================
-   BRAND & LOGO
+   BRAND & LOGO (CLASS NAMES MATCHED)
    ========================================= */
-/* 1. Ensure the brand container keeps its place */
+/* The link block sets a safe structural boundary so nav elements don't overlap */
 .brand { 
   display: flex; 
   align-items: center; 
+  justify-content: center;
   text-decoration: none; 
-  position: relative; /* Acts as the anchor */
-  height: 70px;       /* Set this to your desired Navbar height */
-  width: 130px;       /* Reserve space so nav links don't slide under the logo */
+  height: 70px;                /* Controls navbar structure height */
+  width: 130px;                /* Rigid reserved width for the logo */
+  position: relative;
+  z-index: 10;
 }
 
-/* 2. Style the logo to be large but "float" */
-.nav-logo {
-  position: absolute; /* Takes the logo out of the layout flow */
-  left: 0;
-  top: 90%;           /* Move to vertical center */
-  transform: translateY(-50%); /* Perfectly center it vertically */
-  
-  height: 140px;      /* Your desired large height */
-  width: auto;        /* Keeps aspect ratio */
+/* MATCHED WITH REACT CLASS: .navbar-logo */
+.navbar-logo {
+  height: 70px;                /* Safely fills parent bounding height */
+  width: auto;                 
   object-fit: contain;
-  z-index: 10;        /* Makes sure it sits on top */
+  margin-top: 50px;
+  
+  /* Creates the overlapping large circle cleanly without affecting text flows */
+  transform: scale(1.9);       
+  transform-origin: center center; 
 }
 
 
@@ -161,7 +162,7 @@
 .header-phone { display: flex; align-items: center; gap: 8px; font-weight: 700; color: var(--maroon); font-size: 14.5px; white-space: nowrap; }
 .header-book { display: inline-flex; }
 
-/* Cleaned up default button appearance for toggle */
+/* Menu Toggle Button */
 .menu-toggle { 
   display: none; 
   background: transparent; 
@@ -185,13 +186,18 @@
 
 @media (max-width: 1080px) {
   .header-inner {
-    padding: 10px 20px; /* Reduced horizontal padding to make more room */
+    padding: 10px 20px; 
     gap: 12px;
   }
 
   .brand { 
-    width: 110px;       /* Shrinks the reserved width so buttons fit on the same line */
-    height: 60px;       /* Keeps navbar height proportioned on mobile devices */
+    width: 110px;       
+    height: 60px;       
+  }
+  
+  .navbar-logo {
+    height: 60px;
+    transform: scale(1.6); 
   }
 
   .main-nav { display: none; }
@@ -204,7 +210,7 @@
     padding: 10px 20px 20px;
     border-top: 1px solid var(--line);
     gap: 4px;
-    background: #fff; /* Ensures backdrop is clean */
+    background: #fff; 
   }
   
   .mobile-nav a { 
@@ -231,24 +237,25 @@
 @media (max-width: 640px) {
   .topbar-inner {
     padding: 7px 16px;
-    justify-content: flex-start; /* Matches your screenshot alignment */
+    justify-content: flex-start; 
   }
 
   .topbar-dots {
-    display: none; /* keep the mobile strip lean */
+    display: none; 
   }
 
   .header-inner {
-    padding: 8px 16px;  /* Optimal space saving on extra small screens */
+    padding: 8px 16px;  
   }
   
   .brand {
-    width: 70px;        /* Ensures the elements don't wrap to a new line */
+    width: 80px;        
+    height: 50px;
   }
 
-  /* Fixed: Combining your custom scale while preserving the vertical centering */
-  .nav-logo {
-    transform: translateY(-50%) scale(1.3); 
-    left: -5px;         /* Prevents scale scaling from clipping the logo out of screen */
+  .navbar-logo {
+    height: 50px;
+    transform: scale(1.4);
+    transform-origin: left center; 
   }
 }
