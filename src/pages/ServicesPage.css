@@ -1,0 +1,191 @@
+/* ==========================================================================
+   Arasu Medical — Services Page
+   Luxury Medical Theme (Maroon / Gold / Cream)
+   Scoped under .services-page so these variables never leak into
+   the shared Services / FAQ / Contact components rendered below.
+   ========================================================================== */
+
+.services-page {
+  --maroon: #8b1d22;
+  --maroon-dark: #5e1216;
+  --gold: #f6b400;
+  --gold-soft: rgba(246, 180, 0, 0.14);
+  --cream: #fbf7f0;
+  --ink: #24201f;
+  --muted: #6f6663;
+  --line: rgba(139, 29, 34, 0.12);
+  --radius-sm: 12px;
+  --radius-md: 20px;
+  --radius-lg: 28px;
+  --shadow-sm: 0 8px 20px rgba(139, 29, 34, 0.08);
+  --shadow-md: 0 20px 48px rgba(139, 29, 34, 0.14);
+  --shadow-lg: 0 30px 70px rgba(94, 18, 22, 0.22);
+}
+
+.services-page .container {
+  width: 100%;
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* -------------------------------------------------------------------------
+   Hero
+------------------------------------------------------------------------- */
+
+.services-page .page-hero {
+  position: relative;
+  min-height: 440px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--maroon-dark);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 140px 0 90px;
+  overflow: hidden;
+  text-align: center;
+}
+
+.services-page .page-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    160deg,
+    rgba(94, 18, 22, 0.92) 0%,
+    rgba(139, 29, 34, 0.86) 45%,
+    rgba(94, 18, 22, 0.94) 100%
+  );
+  z-index: 0;
+}
+
+.services-page .page-hero::before {
+  content: "";
+  position: absolute;
+  top: -120px;
+  right: -100px;
+  width: 380px;
+  height: 380px;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(246, 180, 0, 0.18) 0%,
+    rgba(246, 180, 0, 0) 70%
+  );
+  z-index: 0;
+}
+
+.services-page .page-hero::after {
+  content: "";
+  position: absolute;
+  bottom: -140px;
+  left: -120px;
+  width: 340px;
+  height: 340px;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.08) 0%,
+    rgba(255, 255, 255, 0) 70%
+  );
+  z-index: 0;
+}
+
+.services-page .page-hero .container {
+  position: relative;
+  z-index: 1;
+  max-width: 720px;
+}
+
+.services-page .page-hero .eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #fff;
+  background: rgba(255, 255, 255, 0.14);
+  backdrop-filter: blur(6px);
+  padding: 8px 18px;
+  border-radius: 999px;
+}
+
+.services-page .page-hero .eyebrow .dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--gold);
+  display: inline-block;
+}
+
+.services-page .page-hero h1 {
+  font-size: 46px;
+  font-weight: 800;
+  color: #fff;
+  line-height: 1.22;
+  letter-spacing: -0.02em;
+  margin: 20px 0 20px;
+}
+
+.services-page .page-hero p {
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.82);
+  line-height: 1.75;
+  margin-bottom: 26px;
+  max-width: 560px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.services-page .page-hero .breadcrumb {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.75);
+  font-weight: 500;
+}
+
+.services-page .page-hero .breadcrumb span {
+  color: var(--gold);
+  font-weight: 700;
+}
+
+/* -------------------------------------------------------------------------
+   Responsive
+------------------------------------------------------------------------- */
+
+@media (max-width: 992px) {
+  .services-page .page-hero {
+    min-height: 380px;
+    padding: 120px 0 70px;
+  }
+
+  .services-page .page-hero h1 {
+    font-size: 34px;
+  }
+
+  .services-page .page-hero p {
+    font-size: 14.5px;
+  }
+}
+
+@media (max-width: 600px) {
+  .services-page .container {
+    padding: 0 18px;
+  }
+
+  .services-page .page-hero {
+    min-height: 340px;
+    padding: 110px 0 60px;
+  }
+
+  .services-page .page-hero h1 {
+    font-size: 26px;
+  }
+
+  .services-page .page-hero .eyebrow {
+    font-size: 11.5px;
+    padding: 6px 14px;
+  }
+}

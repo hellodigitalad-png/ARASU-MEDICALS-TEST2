@@ -1,0 +1,293 @@
+/* ==========================================
+   TESTIMONIALS
+========================================== */
+
+.testimonials{
+    position:relative;
+    padding:100px 0;
+    background-repeat:no-repeat;
+    background-size:cover;
+    background-position:center;
+    overflow:hidden;
+}
+
+/* ==========================================
+   GRID
+========================================== */
+
+.testi-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
+}
+
+/* ==========================================
+   CARD
+========================================== */
+
+.testi-card{
+
+    background:rgba(255,255,255,.96);
+
+    border:1px solid rgba(0,0,0,.06);
+
+    border-radius:20px;
+
+    padding:30px;
+
+    display:flex;
+    flex-direction:column;
+
+    transition:.35s;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.06);
+
+}
+
+.testi-card:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:0 18px 40px rgba(0,0,0,.12);
+
+}
+
+/* ==========================================
+   STARS
+========================================== */
+
+.testi-stars{
+
+    display:flex;
+    gap:4px;
+
+    color:#f6b400;
+
+    margin-bottom:18px;
+
+}
+
+/* ==========================================
+   QUOTE
+========================================== */
+
+.testi-quote{
+
+    flex:1;
+
+    font-size:15px;
+
+    line-height:1.8;
+
+    color:#555;
+
+    margin-bottom:25px;
+
+    font-style:italic;
+
+}
+
+/* ==========================================
+   PERSON
+========================================== */
+
+.testi-person{
+
+    display:flex;
+    align-items:center;
+    gap:14px;
+
+}
+
+.testi-avatar{
+
+    width:52px;
+    height:52px;
+
+    border-radius:50%;
+
+    background:#8b1d22;
+
+    color:#fff;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    font-size:16px;
+    font-weight:700;
+
+    flex-shrink:0;
+
+}
+
+.testi-person strong{
+
+    display:block;
+
+    font-size:16px;
+
+    color:#222;
+
+    margin-bottom:4px;
+
+}
+
+.testi-person span{
+
+    display:block;
+
+    font-size:13px;
+
+    color:#777;
+
+}
+
+/* ==========================================
+   DOTS
+========================================== */
+
+.testi-dots{
+
+    display:flex;
+    justify-content:center;
+    gap:10px;
+
+    margin-top:45px;
+
+}
+
+.testi-dots button{
+
+    width:10px;
+    height:10px;
+
+    border-radius:50%;
+
+    background:#ddd;
+
+    border:none;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.testi-dots button.active{
+
+    width:30px;
+
+    border-radius:30px;
+
+    background:#8b1d22;
+
+}
+
+/* ==========================================
+   LAPTOP
+========================================== */
+
+@media(max-width:1100px){
+
+.testi-grid{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+}
+
+/* ==========================================
+   TABLET
+========================================== */
+
+@media(max-width:768px){
+
+.testimonials{
+
+padding:80px 0;
+
+}
+
+.testi-grid{
+
+grid-template-columns:1fr;
+
+gap:20px;
+
+}
+
+.testi-card{
+
+padding:25px;
+
+}
+
+.testi-avatar{
+
+width:48px;
+height:48px;
+
+}
+
+.testi-person strong{
+
+font-size:15px;
+
+}
+
+}
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media(max-width:480px){
+
+.testimonials{
+
+padding:60px 0;
+
+}
+
+.testi-card{
+
+padding:20px;
+
+}
+
+.testi-quote{
+
+font-size:14px;
+
+}
+
+.testi-avatar{
+
+width:42px;
+height:42px;
+
+font-size:14px;
+
+}
+
+.testi-person strong{
+
+font-size:14px;
+
+}
+
+.testi-person span{
+
+font-size:12px;
+
+}
+
+.testi-dots{
+
+margin-top:30px;
+
+}
+
+}

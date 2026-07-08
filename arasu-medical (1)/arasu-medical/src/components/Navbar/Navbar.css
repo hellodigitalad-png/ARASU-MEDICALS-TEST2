@@ -1,0 +1,185 @@
+/* =========================================
+   TOPBAR STYLES
+   ========================================= */
+.topbar {
+  background: var(--maroon);
+  color: #f3e2df;
+  font-size: 12.5px;
+}
+
+.topbar-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 7px 32px;
+}
+
+.topbar-left span, 
+.topbar-right span, 
+.topbar-right a { 
+  display: inline-flex; 
+  align-items: center; 
+  gap: 6px; 
+}
+
+.topbar-right { 
+  display: flex; 
+  align-items: center; 
+  gap: 10px; 
+}
+
+.topbar-right .divider { 
+  opacity: 0.4; 
+}
+
+.topbar-right a:hover { 
+  color: var(--yellow); 
+}
+
+
+/* =========================================
+   MAIN HEADER STYLES
+   ========================================= */
+.site-header {
+  background: #fff;
+  border-bottom: 1px solid var(--line);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  transition: box-shadow .2s;
+}
+
+.site-header.is-scrolled { 
+  box-shadow: 0 6px 24px rgba(132,37,38,0.08); 
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 14px 32px;
+}
+
+
+/* =========================================
+   BRAND & LOGO
+   ========================================= */
+/* 1. Ensure the brand container keeps its place */
+.brand {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  position: relative; /* Acts as the anchor */
+  height: 70px;       /* Set this to your desired Navbar height */
+  width: 150px;       /* Reserve space so nav links don't slide under the logo */
+  flex-shrink: 0;
+}
+
+/* 2. Style the logo to be large but "float" above the header edge */
+.nav-logo {
+  position: absolute; /* Takes the logo out of the layout flow */
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%); /* Perfectly center it vertically */
+  height: 100px;      /* Large but no longer clipped/overflowing awkwardly */
+  width: auto;        /* Keeps aspect ratio */
+  max-width: 150px;
+  object-fit: contain;
+  z-index: 10;        /* Makes sure it sits on top */
+}
+/* =========================================
+   DESKTOP NAVIGATION
+   ========================================= */
+.main-nav { 
+  display: flex; 
+  align-items: center; 
+  gap: 28px; 
+  font-size: 14.5px; 
+  font-weight: 500; 
+  color: #3a2f2e; 
+}
+
+.main-nav a { 
+  padding-bottom: 4px; 
+  border-bottom: 2px solid transparent; 
+  transition: all .2s; 
+}
+
+.main-nav a:hover { 
+  color: var(--maroon); 
+}
+
+.main-nav a.active { 
+  color: var(--maroon); 
+  border-bottom-color: var(--orange); 
+  font-weight: 700; 
+}
+
+.header-cta { display: flex; align-items: center; gap: 18px; }
+.header-phone { display: flex; align-items: center; gap: 8px; font-weight: 700; color: var(--maroon); font-size: 14.5px; white-space: nowrap; }
+.header-book { display: inline-flex; }
+.menu-toggle { display: none; color: var(--maroon); }
+.mobile-nav { display: none; }
+
+
+/* =========================================
+   RESPONSIVE DESIGN (TABLET & MOBILE)
+   ========================================= */
+
+@media (min-width: 1081px) {
+  .mobile-nav { display: none !important; }
+}
+
+@media (max-width: 1080px) {
+  .main-nav { display: none; }
+  .header-phone { display: none; }
+  .menu-toggle { display: flex; }
+  
+  .mobile-nav.show, 
+  .mobile-nav {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 32px 20px;
+    border-top: 1px solid var(--line);
+    gap: 4px;
+  }
+  
+  .mobile-nav a { 
+    padding: 12px 4px; 
+    font-weight: 600; 
+    color: #3a2f2e; 
+    border-bottom: 1px solid var(--line); 
+  }
+  
+  .mobile-nav a.active { 
+    color: var(--maroon); 
+  }
+  
+  .mobile-phone { 
+    display: flex; 
+    align-items: center; 
+    gap: 8px; 
+    margin-top: 10px; 
+    font-weight: 700; 
+    color: var(--maroon); 
+  }
+}
+
+@media (max-width: 640px) {
+  .topbar-left { display: none; }
+  .topbar-right span:first-child { display: none; }
+  .topbar-right .divider { display: none; }
+  .topbar-inner { padding: 7px 20px; }
+  .header-inner { padding: 12px 20px; }
+
+  /* Make the logo smaller on mobile phones (without breaking vertical centering) */
+  .brand { height: 56px; width: 110px; }
+  .nav-logo { height: 72px; max-width: 110px; }
+  .header-book { display: none; }
+}
+
+@media (max-width: 400px) {
+  .brand { height: 48px; width: 96px; }
+  .nav-logo { height: 60px; max-width: 96px; }
+}

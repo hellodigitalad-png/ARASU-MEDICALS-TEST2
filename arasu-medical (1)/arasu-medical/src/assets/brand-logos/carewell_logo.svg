@@ -1,0 +1,5 @@
+<svg width="320" height="96" viewBox="0 0 320 96" xmlns="http://www.w3.org/2000/svg">
+<rect width="320" height="96" fill="none"/>
+<path d="M48,32 L61.6,39.2 V50.4 C61.6,60.0 54.4,64.8 48,67.2 C41.6,64.8 34.4,60.0 34.4,50.4 V39.2 Z" fill="#993556"/><path d="M42.4,48 L47.2,52.8 L54.4,44.0" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+<text x="88" y="56" font-family="Arial, Helvetica, sans-serif" font-size="26" font-weight="700" fill="#222222">CareWell</text>
+</svg>

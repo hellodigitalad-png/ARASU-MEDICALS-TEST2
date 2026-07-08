@@ -1,0 +1,233 @@
+/* ==========================================
+   BRANDS SECTION
+========================================== */
+
+.brands{
+    position:relative;
+    padding:100px 0;
+    background-repeat:no-repeat;
+    background-size:cover;
+    background-position:center;
+    overflow:hidden;
+}
+
+/* ==========================================
+   HEADER
+========================================== */
+
+.brands .section-head{
+    text-align:center;
+    max-width:700px;
+    margin:0 auto 50px;
+}
+
+.brands .eyebrow{
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+    padding:10px 18px;
+    background:rgba(255,255,255,.9);
+    border-radius:40px;
+    font-size:14px;
+    font-weight:600;
+    color:#8b1d22;
+    box-shadow:0 8px 20px rgba(0,0,0,.06);
+}
+
+.brands .eyebrow .dot{
+    width:8px;
+    height:8px;
+    border-radius:50%;
+    background:#f6b400;
+}
+
+.brands .section-title{
+    font-size:42px;
+    font-weight:800;
+    color:#222;
+    margin-top:18px;
+}
+
+.brands .section-title span{
+    color:#8b1d22;
+}
+
+/* ==========================================
+   GRID
+========================================== */
+
+.brands-row{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:25px;
+}
+
+/* ==========================================
+   CARD
+========================================== */
+
+.brand-tile{
+
+    background:rgba(255,255,255,.96);
+
+    border:1px solid rgba(0,0,0,.06);
+
+    border-radius:20px;
+
+    padding:25px;
+
+    height:140px;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    transition:.35s;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.06);
+
+}
+
+.brand-tile:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:0 18px 40px rgba(0,0,0,.12);
+
+}
+
+/* ==========================================
+   LOGO
+========================================== */
+
+.brand-logo-img{
+
+    max-width:100%;
+    max-height:70px;
+
+    object-fit:contain;
+
+    filter:grayscale(100%);
+
+    opacity:.75;
+
+    transition:.35s;
+
+}
+
+.brand-tile:hover .brand-logo-img{
+
+    filter:grayscale(0);
+
+    opacity:1;
+
+    transform:scale(1.05);
+
+}
+
+/* ==========================================
+   BUTTON
+========================================== */
+
+.brands-cta{
+
+    display:flex;
+    justify-content:center;
+    margin-top:50px;
+
+}
+
+.brands .btn-outline{
+
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+
+}
+
+/* ==========================================
+   LAPTOP
+========================================== */
+
+@media(max-width:1100px){
+
+.brands-row{
+
+grid-template-columns:repeat(3,1fr);
+
+}
+
+}
+
+/* ==========================================
+   TABLET
+========================================== */
+
+@media(max-width:768px){
+
+.brands{
+
+padding:80px 0;
+
+}
+
+.brands-row{
+
+grid-template-columns:repeat(2,1fr);
+
+gap:18px;
+
+}
+
+.brand-tile{
+
+height:120px;
+padding:20px;
+
+}
+
+.brands .section-title{
+
+font-size:34px;
+
+}
+
+}
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media(max-width:480px){
+
+.brands{
+
+padding:60px 0;
+
+}
+
+.brands-row{
+
+grid-template-columns:1fr;
+
+}
+
+.brand-tile{
+
+height:110px;
+
+}
+
+.brand-logo-img{
+
+max-height:55px;
+
+}
+
+.brands .section-title{
+
+font-size:28px;
+
+}
+
+}

@@ -1,0 +1,58 @@
+.medicines-toolbar { display: flex; flex-direction: column; gap: 20px; margin-bottom: 12px; }
+.search-box {
+  display: flex; align-items: center; gap: 10px;
+  border: 1.5px solid var(--line);
+  border-radius: var(--radius-sm);
+  padding: 12px 16px;
+  max-width: 420px;
+  color: var(--muted);
+}
+.search-box input { border: none; outline: none; flex: 1; font-size: 14px; }
+.category-pills { display: flex; flex-wrap: wrap; gap: 10px; }
+.pill {
+  border: 1.5px solid var(--line);
+  border-radius: 999px;
+  padding: 8px 16px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--ink);
+  transition: all .2s;
+}
+.pill:hover { border-color: var(--maroon); }
+.pill.active { background: var(--maroon); border-color: var(--maroon); color: #fff; }
+
+.results-meta { font-size: 13px; color: var(--muted); margin: 24px 0 20px; }
+.no-results { text-align: center; padding: 60px 20px; color: var(--muted); font-size: 14.5px; }
+
+.medicines-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+.medicine-card {
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  background: #fff;
+  transition: box-shadow .2s, transform .2s;
+}
+.medicine-card:hover { box-shadow: var(--shadow-md); transform: translateY(-4px); }
+.medicine-thumb { position: relative; height: 150px; background: var(--bg-soft); overflow: hidden; }
+.medicine-thumb img { width: 100%; height: 100%; object-fit: cover; }
+.discount-badge {
+  position: absolute; top: 10px; right: 10px;
+  background: var(--darkred); color: #fff;
+  font-size: 10.5px; font-weight: 700;
+  padding: 4px 9px; border-radius: 999px;
+}
+.medicine-info { padding: 16px; }
+.medicine-brand { display: inline-flex; align-items: center; gap: 5px; font-size: 11px; font-weight: 700; color: var(--maroon); text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 6px; }
+.medicine-info h3 { font-size: 14.5px; font-weight: 700; margin-bottom: 6px; color: var(--ink); line-height: 1.3; min-height: 38px; }
+.medicine-category { display: block; font-size: 11.5px; color: var(--muted); margin-bottom: 10px; }
+.medicine-price { display: flex; align-items: baseline; gap: 8px; margin-bottom: 14px; }
+.medicine-price strong { font-size: 17px; font-weight: 800; color: var(--ink); }
+.medicine-price s { font-size: 12.5px; color: var(--muted); }
+
+@media (max-width: 1080px) { .medicines-grid { grid-template-columns: repeat(3, 1fr); } }
+@media (max-width: 720px) { .medicines-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 480px) { .medicines-grid { grid-template-columns: 1fr; } }

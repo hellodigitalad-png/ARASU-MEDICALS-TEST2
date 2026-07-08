@@ -1,0 +1,364 @@
+/* ==========================================
+   ABOUT SECTION
+========================================== */
+
+.about {
+  position: relative;
+  padding: 100px 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+}
+
+.about-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 70px;
+  align-items: center;
+}
+
+/* ==========================================
+   LEFT IMAGE
+========================================== */
+
+.about-media {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.about-doctor {
+  width: 100%;
+  max-width: 560px;
+  height: auto;
+  object-fit: contain;
+  display: block;
+  user-select: none;
+}
+
+/* ==========================================
+   EXPERIENCE CARD
+========================================== */
+
+.about-exp-card {
+  position: absolute;
+  right: 20px;
+  bottom: 25px;
+
+  background: #8b1d22;
+  color: #fff;
+
+  padding: 18px 24px;
+
+  border-radius: 18px;
+
+  text-align: center;
+
+  box-shadow: 0 15px 35px rgba(0,0,0,.18);
+}
+
+.about-exp-card strong {
+  display: block;
+  font-size: 30px;
+  font-weight: 800;
+}
+
+.about-exp-card span {
+  display: block;
+  margin-top: 6px;
+  font-size: 13px;
+  color: rgba(255,255,255,.9);
+}
+
+/* ==========================================
+   RIGHT CONTENT
+========================================== */
+
+.about-copy {
+  max-width: 620px;
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+
+  background: rgba(255,255,255,.9);
+
+  padding: 10px 18px;
+
+  border-radius: 40px;
+
+  margin-bottom: 20px;
+
+  font-size: 14px;
+  font-weight: 600;
+  color: #8b1d22;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  background: #f6b400;
+  border-radius: 50%;
+}
+
+.section-title {
+  font-size: 48px;
+  line-height: 1.2;
+  font-weight: 800;
+  color: #222;
+  margin-bottom: 20px;
+}
+
+.section-title span {
+  color: #8b1d22;
+}
+
+.section-sub {
+  font-size: 18px;
+  line-height: 1.8;
+  color: #666;
+  margin-bottom: 25px;
+}
+
+/* ==========================================
+   POINTS
+========================================== */
+
+.about-points {
+  list-style: none;
+  padding: 0;
+  margin: 30px 0;
+
+  display: grid;
+  gap: 18px;
+}
+
+.about-points li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  font-size: 16px;
+  font-weight: 500;
+  color: #333;
+}
+
+.about-points li svg {
+  color: #17a44b;
+  flex-shrink: 0;
+}
+
+/* ==========================================
+   BUTTON
+========================================== */
+
+.about .btn {
+  margin-top: 10px;
+}
+
+/* ==========================================
+   LARGE TABLET
+========================================== */
+
+@media (max-width:1100px){
+
+.about-inner{
+
+gap:50px;
+
+}
+
+.section-title{
+
+font-size:42px;
+
+}
+
+.about-doctor{
+
+max-width:470px;
+
+}
+
+}
+
+/* ==========================================
+   TABLET
+========================================== */
+
+@media (max-width:900px){
+
+.about{
+
+padding:80px 0;
+
+}
+
+.about-inner{
+
+grid-template-columns:1fr;
+
+gap:50px;
+
+text-align:center;
+
+}
+
+.about-media{
+
+order:-1;
+
+}
+
+.about-copy{
+
+margin:auto;
+
+}
+
+.about-doctor{
+
+max-width:420px;
+
+}
+
+.about-points{
+
+justify-items:center;
+
+}
+
+.about-points li{
+
+justify-content:center;
+
+}
+
+.about-exp-card{
+
+right:50%;
+transform:translateX(50%);
+bottom:10px;
+
+}
+
+}
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media (max-width:768px){
+
+.about{
+
+padding:60px 0;
+
+}
+
+.section-title{
+
+font-size:36px;
+
+}
+
+.section-sub{
+
+font-size:16px;
+
+}
+
+.about-doctor{
+
+max-width:320px;
+
+}
+
+.about-exp-card{
+
+padding:14px 18px;
+
+}
+
+.about-exp-card strong{
+
+font-size:24px;
+
+}
+
+.about-exp-card span{
+
+font-size:12px;
+
+}
+
+}
+
+/* ==========================================
+   SMALL MOBILE
+========================================== */
+
+@media (max-width:480px){
+
+.about{
+
+padding:50px 0;
+
+}
+
+.section-title{
+
+font-size:30px;
+
+}
+
+.section-sub{
+
+font-size:15px;
+
+line-height:1.7;
+
+}
+
+.eyebrow{
+
+font-size:12px;
+padding:8px 14px;
+
+}
+
+.about-doctor{
+
+max-width:260px;
+
+}
+
+.about-exp-card{
+
+padding:12px 15px;
+
+}
+
+.about-exp-card strong{
+
+font-size:22px;
+
+}
+
+.about-exp-card span{
+
+font-size:11px;
+
+}
+
+.about-points li{
+
+font-size:14px;
+
+}
+
+}

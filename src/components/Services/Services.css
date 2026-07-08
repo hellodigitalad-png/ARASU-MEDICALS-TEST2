@@ -1,0 +1,223 @@
+/* ==========================================
+   SERVICES SECTION
+========================================== */
+
+.services{
+    position:relative;
+    padding:100px 0;
+    background-repeat:no-repeat;
+    background-size:cover;
+    background-position:center;
+    overflow:hidden;
+}
+
+/* ==========================================
+   GRID
+========================================== */
+
+.services-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
+}
+
+/* ==========================================
+   CARD
+========================================== */
+
+.service-card{
+
+    background:rgba(255,255,255,.96);
+
+    border:1px solid rgba(0,0,0,.06);
+
+    border-radius:20px;
+
+    padding:30px;
+
+    transition:.35s;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.06);
+
+}
+
+.service-card:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:0 18px 40px rgba(0,0,0,.12);
+
+}
+
+/* ==========================================
+   ICON
+========================================== */
+
+.service-icon{
+
+    width:65px;
+    height:65px;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    border-radius:18px;
+
+    background:rgba(139,29,34,.10);
+
+    color:#8b1d22;
+
+    margin-bottom:20px;
+
+    transition:.35s;
+
+}
+
+.service-card:hover .service-icon{
+
+    background:#8b1d22;
+    color:#fff;
+    transform:rotate(-8deg);
+
+}
+
+/* ==========================================
+   TEXT
+========================================== */
+
+.service-card h3{
+
+    font-size:20px;
+
+    font-weight:700;
+
+    color:#222;
+
+    margin-bottom:12px;
+
+}
+
+.service-card p{
+
+    font-size:15px;
+
+    line-height:1.8;
+
+    color:#666;
+
+}
+
+/* ==========================================
+   BUTTON
+========================================== */
+
+.products-cta{
+
+    text-align:center;
+
+    margin-top:50px;
+
+}
+
+/* ==========================================
+   LAPTOP
+========================================== */
+
+@media(max-width:1200px){
+
+.services-grid{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+}
+
+/* ==========================================
+   TABLET
+========================================== */
+
+@media(max-width:768px){
+
+.services{
+
+padding:80px 0;
+
+}
+
+.services-grid{
+
+grid-template-columns:1fr;
+
+gap:20px;
+
+}
+
+.service-card{
+
+padding:25px;
+
+}
+
+.service-icon{
+
+width:60px;
+height:60px;
+
+}
+
+.service-card h3{
+
+font-size:18px;
+
+}
+
+.service-card p{
+
+font-size:14px;
+
+}
+
+}
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media(max-width:480px){
+
+.services{
+
+padding:60px 0;
+
+}
+
+.service-card{
+
+padding:22px;
+
+}
+
+.service-icon{
+
+width:55px;
+height:55px;
+
+}
+
+.service-card h3{
+
+font-size:17px;
+
+}
+
+.service-card p{
+
+font-size:14px;
+
+line-height:1.7;
+
+}
+
+}

@@ -1,0 +1,23 @@
+.statistics { background: var(--maroon); }
+.stat-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 20px;
+}
+.stat-card { text-align: center; color: #fff; padding: 8px; }
+.stat-icon {
+  width: 52px; height: 52px; border-radius: 50%;
+  background: rgba(255,255,255,0.12);
+  display: flex; align-items: center; justify-content: center;
+  margin: 0 auto 14px;
+  color: var(--yellow);
+}
+.stat-num { font-size: 28px; font-weight: 800; margin-bottom: 4px; }
+.stat-label { font-size: 12.5px; color: #f0dcd9; font-weight: 500; }
+
+@media (max-width: 1080px) {
+  .stat-grid { grid-template-columns: repeat(3, 1fr); row-gap: 32px; }
+}
+@media (max-width: 560px) {
+  .stat-grid { grid-template-columns: repeat(2, 1fr); }
+}

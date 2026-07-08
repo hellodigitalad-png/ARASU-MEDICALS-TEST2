@@ -1,0 +1,300 @@
+/* ==========================================
+   BRANCHES
+========================================== */
+
+.branches{
+    position:relative;
+    padding:100px 0;
+    background-repeat:no-repeat;
+    background-size:cover;
+    background-position:center;
+    overflow:hidden;
+}
+
+/* ==========================================
+   LAYOUT
+========================================== */
+
+.branches-layout{
+    display:grid;
+    grid-template-columns:1.1fr .9fr;
+    gap:35px;
+    align-items:stretch;
+}
+
+/* ==========================================
+   MAP
+========================================== */
+
+.branches-map{
+
+    position:relative;
+
+    overflow:hidden;
+
+    border-radius:22px;
+
+    box-shadow:0 12px 30px rgba(0,0,0,.08);
+
+}
+
+.branches-map img{
+
+    width:100%;
+    height:100%;
+    min-height:450px;
+
+    object-fit:cover;
+
+    display:block;
+
+}
+
+.map-pin-count{
+
+    position:absolute;
+
+    top:20px;
+    left:20px;
+
+    background:#8b1d22;
+
+    color:#fff;
+
+    padding:10px 18px;
+
+    border-radius:50px;
+
+    display:flex;
+    align-items:center;
+    gap:8px;
+
+    font-size:14px;
+    font-weight:700;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.15);
+
+}
+
+/* ==========================================
+   LIST
+========================================== */
+
+.branches-list{
+
+    display:flex;
+    flex-direction:column;
+    gap:18px;
+
+}
+
+/* ==========================================
+   ITEM
+========================================== */
+
+.branch-item{
+
+    display:flex;
+    gap:15px;
+
+    background:rgba(255,255,255,.95);
+
+    border:1px solid rgba(0,0,0,.06);
+
+    border-radius:18px;
+
+    padding:18px;
+
+    transition:.35s;
+
+    box-shadow:0 8px 18px rgba(0,0,0,.05);
+
+}
+
+.branch-item:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:0 18px 35px rgba(0,0,0,.12);
+
+}
+
+.branch-icon{
+
+    width:48px;
+    height:48px;
+
+    border-radius:14px;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    flex-shrink:0;
+
+    background:rgba(139,29,34,.10);
+
+    color:#8b1d22;
+
+}
+
+.branch-item h4{
+
+    font-size:18px;
+
+    font-weight:700;
+
+    color:#222;
+
+    margin-bottom:8px;
+
+}
+
+.branch-item p{
+
+    font-size:14px;
+
+    line-height:1.7;
+
+    color:#666;
+
+}
+
+/* ==========================================
+   BUTTON
+========================================== */
+
+.branches .btn{
+
+    margin-top:12px;
+
+}
+
+/* ==========================================
+   LAPTOP
+========================================== */
+
+@media(max-width:1100px){
+
+.branches-layout{
+
+grid-template-columns:1fr;
+
+}
+
+.branches-map img{
+
+min-height:350px;
+
+}
+
+}
+
+/* ==========================================
+   TABLET
+========================================== */
+
+@media(max-width:768px){
+
+.branches{
+
+padding:80px 0;
+
+}
+
+.branches-layout{
+
+gap:25px;
+
+}
+
+.branches-map img{
+
+min-height:280px;
+
+}
+
+.branch-item{
+
+padding:16px;
+
+}
+
+.branch-icon{
+
+width:42px;
+height:42px;
+
+}
+
+.branch-item h4{
+
+font-size:17px;
+
+}
+
+.branch-item p{
+
+font-size:14px;
+
+}
+
+}
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media(max-width:480px){
+
+.branches{
+
+padding:60px 0;
+
+}
+
+.branches-map img{
+
+min-height:220px;
+
+}
+
+.map-pin-count{
+
+top:15px;
+left:15px;
+
+font-size:12px;
+
+padding:8px 14px;
+
+}
+
+.branch-item{
+
+padding:14px;
+
+}
+
+.branch-icon{
+
+width:38px;
+height:38px;
+
+}
+
+.branch-item h4{
+
+font-size:16px;
+
+}
+
+.branch-item p{
+
+font-size:13px;
+
+line-height:1.6;
+
+}
+
+}

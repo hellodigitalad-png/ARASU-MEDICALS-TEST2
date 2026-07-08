@@ -1,0 +1,241 @@
+/* ==========================================
+   WHY CHOOSE US
+========================================== */
+
+.why{
+    position:relative;
+    padding:100px 0;
+    background-repeat:no-repeat;
+    background-size:cover;
+    background-position:center;
+    overflow:hidden;
+}
+
+/* ==========================================
+   GRID
+========================================== */
+
+.why-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:28px;
+}
+
+/* ==========================================
+   CARD
+========================================== */
+
+.why-card{
+
+    background:rgba(255,255,255,.95);
+
+    border:1px solid rgba(0,0,0,.06);
+
+    border-radius:20px;
+
+    padding:35px 25px;
+
+    text-align:center;
+
+    transition:.35s;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.06);
+
+}
+
+.why-card:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:0 20px 45px rgba(0,0,0,.12);
+
+}
+
+/* ==========================================
+   ICON
+========================================== */
+
+.icon-circle{
+
+    width:70px;
+    height:70px;
+
+    border-radius:50%;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    margin:0 auto 20px;
+
+    box-shadow:0 10px 20px rgba(0,0,0,.12);
+
+}
+
+.title-rule{
+
+    width:45px;
+    height:3px;
+
+    background:#f6b400;
+
+    margin:0 auto 18px;
+
+    border-radius:20px;
+
+}
+
+/* ==========================================
+   TEXT
+========================================== */
+
+.why-card h3{
+
+    font-size:20px;
+
+    font-weight:700;
+
+    color:#222;
+
+    margin-bottom:12px;
+
+}
+
+.why-card p{
+
+    font-size:15px;
+
+    line-height:1.7;
+
+    color:#666;
+
+}
+
+/* ==========================================
+   LARGE DESKTOP / 27"+ MONITORS
+   (cards were rendering oversized on big screens; scale them down
+   a notch, same approach used for the tablet/mobile breakpoints below)
+========================================== */
+
+@media(min-width:1600px){
+
+.why-card{
+
+padding:30px 22px;
+
+}
+
+.icon-circle{
+
+width:60px;
+height:60px;
+
+}
+
+.why-card h3{
+
+font-size:18px;
+
+}
+
+.why-card p{
+
+font-size:14px;
+
+}
+
+}
+
+/* ==========================================
+   LARGE TABLET
+========================================== */
+
+@media(max-width:1100px){
+
+.why-grid{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+}
+
+/* ==========================================
+   TABLET
+========================================== */
+
+@media(max-width:768px){
+
+.why{
+
+padding:80px 0;
+
+}
+
+.why-grid{
+
+grid-template-columns:1fr;
+
+gap:22px;
+
+}
+
+.why-card{
+
+padding:30px 22px;
+
+}
+
+.icon-circle{
+
+width:65px;
+height:65px;
+
+}
+
+.why-card h3{
+
+font-size:18px;
+
+}
+
+}
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media(max-width:480px){
+
+.why{
+
+padding:60px 0;
+
+}
+
+.why-card{
+
+padding:25px 20px;
+
+}
+
+.icon-circle{
+
+width:60px;
+height:60px;
+
+}
+
+.why-card h3{
+
+font-size:17px;
+
+}
+
+.why-card p{
+
+font-size:14px;
+
+}
+
+}
